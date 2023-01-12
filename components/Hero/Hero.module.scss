@@ -1,0 +1,9 @@
+@use "styles/variables";
+
+.title {
+  background-color: variables.$color-primary;
+
+  // Properties for larger screens
+  @media (min-width: variables.$breakpoint-tablet) {
+  }
+}

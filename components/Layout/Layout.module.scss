@@ -1,0 +1,9 @@
+@use "styles/variables";
+
+.content {
+  padding: 0 5vw;
+
+  // Properties for larger screens
+  @media (min-width: variables.$breakpoint-tablet) {
+  }
+}
