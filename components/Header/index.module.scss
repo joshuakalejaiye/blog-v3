@@ -1,0 +1,33 @@
+@use "styles/variables";
+
+.nav {
+  margin-right: 10vw;
+  margin-top: 8vw;
+  display: flex;
+  text-align: center;
+  justify-content: flex-end;
+  gap: 37px;
+
+  // Properties for larger screens
+  @media (min-width: variables.$breakpoint-tablet) {
+    margin-top: 30px;
+    margin-right: 15vw;
+    margin-bottom: 10px;
+    gap: 20px;
+  }
+}
+
+.navItem {
+  margin-bottom: -8px;
+
+  color: variables.$color-accent;
+  cursor: pointer;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      color: variables.$color-accent;
+    }
+  }
+}

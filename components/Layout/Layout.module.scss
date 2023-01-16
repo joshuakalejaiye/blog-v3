@@ -1,10 +1,10 @@
 @use "styles/variables";
 
 .content {
-  max-width: 60%;
+  max-width: 80vw;
   margin: auto;
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
-    max-width: 60%;
+    max-width: 70%;
   }
 }

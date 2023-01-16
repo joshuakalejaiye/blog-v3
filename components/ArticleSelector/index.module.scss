@@ -1,0 +1,32 @@
+@use "styles/variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    flex-direction: row;
+    min-height: 100%;
+    width: 200vw;
+    gap: 50px;
+    align-items: center;
+    cursor: pointer;
+    width: 100vw;
+  }
+}
+
+.articleCard {
+  height: 365px;
+  background-color: variables.$color-accent;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    height: 800px;
+    width: 500px;
+    background-color: variables.$color-accent;
+  }
+}

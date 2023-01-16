@@ -1,36 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Padyakke+Expanded+One&family=Varela&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 // Font Variables
-$varela: "Varela", serif;
-$padyakke: "Padyakke Expanded One", cursive;
-$minerva-black: "Minerva Modern Black", serif;
-$minerva-black-italic: "Minerva Modern Black Italic", serif;
-$minerva-bold: "Minerva Modern Bold", serif;
-$minerva-bold-italic: "Minerva Modern Bold Italic", serif;
-$minerva-italic: "Minerva Modern Italic", serif;
+$poppins: "Poppins", sans-serif;
+$space-mono: "Space Mono", monospace;
+$milligram: "Milligram-Heavy", sans-serif;
 
 // media queries
 $breakpoint-tablet: 800px;
 
-// light mode colors
-$color-primary: #e6e6e6;
-$color-secondary: #f6f6f6;
-$color-tertiary: #e6e6e6;
-$color-fontColor: #000;
-$color-btnFontColor: #fff;
-$color-accent: #f06c00;
-
-// //dark mode colors
-// $color-primary: #121212;
-// $color-secondary: #181818;
-// $color-tertiary: #282828;
-// $color-light: #939393;
-// $color-fontColor: #d8e1ed;
-// $color-secondaryFontColor: #d8e1ed;
+// // light mode colors
+// $color-primary: #e6e6e6;
+// $color-secondary: #f6f6f6;
+// $color-tertiary: #e6e6e6;
+// $color-fontColor: #000;
 // $color-btnFontColor: #fff;
-// $color-BtnHover: #ffffff;
-// $color-accent: #3dffc5;
+// $color-accent: #f06c00;
+
+//dark mode colors
+$color-primary: #121212;
+$color-secondary: #181818;
+$color-tertiary: #282828;
+$color-light: #939393;
+$color-fontColor: #fff;
+$color-secondaryFontColor: #d8e1ed;
+$color-btnFontColor: #fff;
+$color-BtnHover: #ffffff;
+$color-accent: #e0d0d0;
 
 // font sizes
 $font-regular: 15px;
 $font-medium: 17px;
 $font-large: 20px;
+
+:export {
+  breakpointTablet: $breakpoint-tablet;
+}
