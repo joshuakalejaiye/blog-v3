@@ -1,7 +1,10 @@
-.homeSection {
-  height: 100vh;
+.main {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  min-width: 100vw;
 }
 
+.homeSection,
 .blogSection {
   height: 100vh;
 }

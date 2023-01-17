@@ -6,26 +6,23 @@ const useScreenSize = (): {
   height: number;
 } => {
   const [screenSize, setScreenSize] = useState({
-    mobile: window.innerWidth < 800,
-    width: window.innerWidth,
-    height: window.innerHeight,
+    mobile: false,
+    width: 0,
+    height: 0,
   });
 
   const onResize = () => {
-    if (window) {
-      setScreenSize({
-        mobile: window.innerWidth < 800,
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
+    setScreenSize({
+      mobile: window?.innerWidth < 800,
+      width: window?.innerWidth,
+      height: window?.innerHeight,
+    });
   };
 
   useEffect(() => {
-    if (window) {
-      window.addEventListener("resize", onResize);
-    }
-    return () => window.removeEventListener("resize", onResize);
+    onResize();
+    window?.addEventListener("resize", onResize);
+    return () => window?.removeEventListener("resize", onResize);
   }, []);
 
   return screenSize;

@@ -12,21 +12,31 @@
   @media (min-width: variables.$breakpoint-tablet) {
     flex-direction: row;
     min-height: 100%;
-    width: 200vw;
     gap: 50px;
-    align-items: center;
     cursor: pointer;
-    width: 100vw;
+    margin-left: 8rem;
+    align-items: center;
   }
 }
 
 .articleCard {
   height: 365px;
-  background-color: variables.$color-accent;
+  object-fit: cover;
+  -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
+  -webkit-user-select: none;
+  -ms-user-select: none; /* From IE10 only */
+  user-select: none; /* Not valid CSS yet, as of July 2012 */
+  -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
+  user-drag: none;
+  font-family: "object-fit: contain;";
 
   @media (min-width: variables.$breakpoint-tablet) {
-    height: 800px;
-    width: 500px;
+    height: 600px;
+    min-width: 400px;
+    max-width: 500px;
+    min-height: 365px;
     background-color: variables.$color-accent;
+    user-select: none;
+    object-position: left;
   }
 }

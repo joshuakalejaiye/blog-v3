@@ -9,12 +9,12 @@ export default function Home() {
   return (
     <Layout flex title={pageTitle}>
       <main className={styles.main}>
-        <div className={styles.homeSection}>
+        <section className={styles.homeSection}>
           <Hero />
-        </div>
-        <div id="blog" className={styles.blogSection}>
+        </section>
+        <section draggable="false" id="blog" className={styles.blogSection}>
           <ArticleSelector />
-        </div>
+        </section>
       </main>
     </Layout>
   );
