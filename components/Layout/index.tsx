@@ -13,8 +13,6 @@ const Layout = ({ children, title, flex }: LayoutProps) => {
     <main>
       <Head>
         <title>Joshua Kalejaiye</title>
-        <meta name="description" content="New Blog, Under Construction" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <noscript>
         <style type="text/css">

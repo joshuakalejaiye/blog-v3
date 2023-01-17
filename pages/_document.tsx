@@ -4,6 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta name="description" content="New Blog, Under Construction" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="preload"
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
