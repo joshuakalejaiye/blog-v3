@@ -67,7 +67,7 @@
   left: 0.9rem;
 
   @media (min-width: variables.$breakpoint-tablet) {
-    left: 8rem;
+    left: 7.8rem;
     margin-bottom: -5.25rem;
   }
 
@@ -91,7 +91,8 @@
 
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
-    left: 8rem;
+    transform: scale(0.99);
+    left: 7.8rem;
     margin-bottom: -7.6rem;
     font-size: 1.23rem;
   }

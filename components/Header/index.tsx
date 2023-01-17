@@ -12,7 +12,7 @@ const Header = () => {
         </Link>
       )} */}
       <Link className={styles.navItem} href="/about">
-        About
+        ABOUT
       </Link>
     </nav>
   );

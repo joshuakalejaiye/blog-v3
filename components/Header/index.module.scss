@@ -10,7 +10,9 @@
 
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
-    margin-top: 30px;
+    margin-top: 5px;
+    height: 50px;
+    align-items: center;
     margin-right: 2vw;
     gap: 20px;
   }
@@ -20,7 +22,8 @@
   margin-bottom: -8px;
   color: variables.$color-accent;
   cursor: pointer;
-  font-family: variables.$space-mono;
+  font-family: variables.$milligram;
+  font-weight: 800;
   font-size: 18px;
   @media (min-width: variables.$breakpoint-tablet) {
     color: rgba(255, 255, 255, 0.3);
