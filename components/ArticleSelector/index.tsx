@@ -1,5 +1,15 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
+
+const imageTitles = [
+  "The first image",
+  "The second image",
+  "The third image",
+  "The fourth image",
+  "The fifth image",
+  "The sixth image",
+];
 
 const imageUrls = [
   "https://images.unsplash.com/photo-1490604001847-b712b0c2f967?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1853&q=80",
@@ -23,14 +33,18 @@ const ArticleSelector = () => {
       className={styles.container}
     >
       {imageUrls.map((url) => (
-        <img
-          key={imageUrls.indexOf(url)}
-          draggable="false"
-          src={url}
-          ref={(el) => (imageRefs.current[imageUrls.indexOf(url)] = el)}
-          className={styles.articleCard}
-          alt="banner image"
-        ></img>
+        <div className={styles.cardContainer} key={imageUrls.indexOf(url)}>
+          <img
+            draggable="false"
+            src={url}
+            ref={(el) => (imageRefs.current[imageUrls.indexOf(url)] = el)}
+            className={styles.cardImage}
+            alt="banner image"
+          ></img>
+          <h1 className={styles.CardTitle}>
+            {imageTitles[imageUrls.indexOf(url)].toUpperCase()}
+          </h1>
+        </div>
       ))}
     </div>
   );

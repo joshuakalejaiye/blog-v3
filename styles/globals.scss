@@ -105,11 +105,13 @@ pre {
 
 // My Custom Theming
 h1 {
-  font-size: variables.$font-large;
+  font-size: variables.$font-xlarge;
+  font-family: variables.$milligram;
   user-select: none;
 }
 
 * {
+  // border: 1px solid red;
   font-family: variables.$poppins;
 }
 
