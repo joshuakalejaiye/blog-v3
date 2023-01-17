@@ -28,7 +28,6 @@
   user-select: none; /* Not valid CSS yet, as of July 2012 */
   -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
   user-drag: none;
-  font-family: "object-fit: contain;";
 
   @media (min-width: variables.$breakpoint-tablet) {
     height: 600px;

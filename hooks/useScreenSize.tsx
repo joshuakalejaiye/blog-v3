@@ -13,15 +13,15 @@ const useScreenSize = (): {
 
   const onResize = () => {
     setScreenSize({
-      mobile: window?.innerWidth < 800,
-      width: window?.innerWidth,
-      height: window?.innerHeight,
+      mobile: window.innerWidth < 800,
+      width: window.innerWidth,
+      height: window.innerHeight,
     });
   };
 
   useEffect(() => {
     onResize();
-    window?.addEventListener("resize", onResize);
+    window.addEventListener("resize", onResize);
     return () => window?.removeEventListener("resize", onResize);
   }, []);
 

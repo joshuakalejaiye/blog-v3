@@ -25,11 +25,21 @@
   font-family: variables.$milligram;
   font-weight: 800;
   font-size: 18px;
+
   @media (min-width: variables.$breakpoint-tablet) {
-    color: rgba(255, 255, 255, 0.3);
+    color: variables.$color-accent;
 
     &:hover {
       color: variables.$color-accent;
     }
   }
+}
+
+.underline {
+  margin-top: 3px;
+  width: 62px;
+  height: 4px;
+  background: variables.$color-accent;
+  opacity: 0.85;
+  transform: scaleX(-1);
 }

@@ -1,7 +1,8 @@
 .main {
-  overflow-y: scroll;
-  overflow-x: hidden;
-  min-width: 100vw;
+  @media (min-width: 800px) {
+    min-width: 100vw;
+    overflow-x: hidden;
+  }
 }
 
 .homeSection,
