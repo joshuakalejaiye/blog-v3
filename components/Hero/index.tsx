@@ -27,12 +27,12 @@ const Hero = () => {
               ? { y: 0, x: 0, opacity: 0 }
               : shouldReduceMotion
               ? { y: 680, opacity: 1 }
-              : { y: 400, opacity: 0 }
+              : { y: -670, opacity: 0 }
           }
           transition={{
             delay: 0.5,
             opacity: { duration: 0.2 },
-            y: { duration: width < 800 ? 0 : 0.3, type: "spring" },
+            y: { duration: 0.3, type: "spring" },
           }}
         >
           {" "}
@@ -45,22 +45,11 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          animate={
-            width < 800 || shouldReduceMotion
-              ? { x: 0, y: 0, opacity: 1 }
-              : { y: 0, opacity: 1 }
-          }
-          initial={
-            width < 800
-              ? { y: 0, x: 0, opacity: 0 }
-              : shouldReduceMotion
-              ? { y: 682, opacity: 1 }
-              : { y: 400, opacity: 0 }
-          }
+          animate={width < 800 ? { opacity: 1 } : { opacity: 1 }}
+          initial={{ opacity: 0 }}
           transition={{
             delay: 1,
             opacity: { duration: 0.2 },
-            y: { duration: width < 800 ? 0 : 0.3, type: "spring" },
           }}
         >
           <p className={`${styles.subtitle} ${styles.text}`}>
