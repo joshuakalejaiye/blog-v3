@@ -20,7 +20,7 @@ const Hero = () => {
           animate={
             width < 800 || shouldReduceMotion
               ? { x: 0, y: 0, opacity: 1 }
-              : { y: 680, opacity: 1 }
+              : { y: 0, opacity: 1 }
           }
           initial={
             width < 800
@@ -48,7 +48,7 @@ const Hero = () => {
           animate={
             width < 800 || shouldReduceMotion
               ? { x: 0, y: 0, opacity: 1 }
-              : { y: 682, opacity: 1 }
+              : { y: 0, opacity: 1 }
           }
           initial={
             width < 800
