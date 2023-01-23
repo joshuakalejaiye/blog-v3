@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./index.module.scss";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { useRouter } from "next/router";
 
@@ -14,6 +14,8 @@ const Header = () => {
     buttonText: string;
     underlineWidth: any;
   }>();
+
+  const [link, setLink] = useState<any>("/about");
 
   const destinations: {
     [x in string]: { route: string; buttonText: string; underlineWidth: any };
@@ -31,11 +33,12 @@ const Header = () => {
   };
 
   useEffect(() => {
-    setPathInfo(
+    const destination =
       destinations[
         "/" === router.pathname ? String(router.pathname) : "fallback"
-      ]
-    );
+      ];
+    setPathInfo(destination);
+    setLink(destination.route);
   }, []);
 
   console.log(pathInfo);
@@ -44,7 +47,7 @@ const Header = () => {
   }`;
   return (
     <nav className={headerStyle}>
-      <Link className={styles.navItem} href={pathInfo?.route ?? "/"}>
+      <Link className={styles.navItem} href={link}>
         <>
           <motion.p
             onMouseEnter={() => setNavItemHovered(true)}
