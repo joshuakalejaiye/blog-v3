@@ -50,7 +50,9 @@ const Header = () => {
             onMouseEnter={() => setNavItemHovered(true)}
             onMouseLeave={() => setNavItemHovered(false)}
             whileHover={{ scale: 1.2 }}
-            transition={{ duration: 0.2 }}
+            transition={{ scale: { duration: 0.2 }, opacity: { delay: 0.5 } }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className={styles.navItem}
             style={{ margin: 0, marginTop: "15px", padding: 0 }}
           >
