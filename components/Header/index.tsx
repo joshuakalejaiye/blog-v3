@@ -28,7 +28,7 @@ const Header = () => {
     fallback: {
       route: "/",
       buttonText: "BACK",
-      underlineWidth: "45px",
+      underlineWidth: "48px",
     },
   };
 
@@ -41,7 +41,6 @@ const Header = () => {
     setLink(destination.route);
   }, []);
 
-  console.log(pathInfo);
   const headerStyle = `${styles.nav} ${
     "/" !== router.pathname && styles.contentMode
   }`;
@@ -52,8 +51,8 @@ const Header = () => {
           <motion.p
             onMouseEnter={() => setNavItemHovered(true)}
             onMouseLeave={() => setNavItemHovered(false)}
-            whileHover={{ scale: 1.2 }}
-            transition={{ scale: { duration: 0.2 }, opacity: { delay: 0.5 } }}
+            whileHover={{ x: 0, y: 0, scale: 1.2 }}
+            transition={{ scale: { duration: 0.1 }, opacity: { delay: 0.5 } }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className={styles.navItem}
@@ -69,7 +68,10 @@ const Header = () => {
             animate={
               navItemHovered
                 ? { width: pathInfo?.underlineWidth, opacity: 1 }
-                : { width: shouldReduceMotion ? "55px" : "0%", opacity: 0 }
+                : {
+                    width: shouldReduceMotion ? pathInfo?.underlineWidth : "0%",
+                    opacity: 0,
+                  }
             }
           />
         </>
