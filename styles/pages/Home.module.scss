@@ -1,5 +1,7 @@
+@use "styles/variables";
+
 .main {
-  @media (min-width: 800px) {
+  @media (min-width: variables.$breakpoint-tablet) {
     min-width: 100vw;
     overflow-x: hidden;
   }

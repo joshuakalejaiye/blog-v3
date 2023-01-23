@@ -2,10 +2,11 @@
 
 .nav {
   margin-right: 10vw;
-  margin-top: 8vw;
   display: flex;
   text-align: center;
   justify-content: flex-end;
+  margin-bottom: -11px;
+  margin-top: 10px;
   gap: 37px;
 
   // Properties for larger screens
@@ -19,7 +20,6 @@
 }
 
 .navItem {
-  margin-bottom: -8px;
   color: variables.$color-accent;
   cursor: pointer;
   font-family: variables.$milligram;
@@ -27,6 +27,7 @@
   font-size: 18px;
 
   @media (min-width: variables.$breakpoint-tablet) {
+    margin-bottom: 12px;
     color: variables.$color-accent;
 
     &:hover {
@@ -42,4 +43,12 @@
   background: variables.$color-accent;
   opacity: 0.85;
   transform: scaleX(-1);
+}
+
+.contentMode {
+  margin-top: 0;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    margin-top: 5px;
+  }
 }
