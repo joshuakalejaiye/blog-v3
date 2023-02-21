@@ -12,6 +12,7 @@ const Layout = ({ children, title, flex }: LayoutProps) => {
   return (
     <main>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Joshua Kalejaiye</title>
       </Head>
       <noscript>

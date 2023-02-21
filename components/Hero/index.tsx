@@ -3,6 +3,8 @@ import styles from "./index.module.scss";
 import { motion } from "framer-motion";
 import { useReducedMotion } from "framer-motion";
 import useScreenSize from "../../hooks/useScreenSize";
+import Image from "next/image";
+import heroImage from "../../assets/ebun_oluwole_max.webp";
 
 const Hero = () => {
   const { width } = useScreenSize();
@@ -11,11 +13,16 @@ const Hero = () => {
     <div className={styles.container}>
       {/* <div className={styles.splash}></div> */}
       <div draggable="false" className={styles.textSection}>
-        <img
-          draggable="false"
-          src="https://images.unsplash.com/photo-1670854747451-73701f3fdc79?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-          alt="MUST BE REPLACED"
-        ></img>
+        <div className={styles.imageCropper}>
+          <Image
+            className={styles.image}
+            draggable="false"
+            src={heroImage}
+            width={6000}
+            height={4000}
+            alt="MUST BE REPLACED"
+          ></Image>
+        </div>
         <motion.div
           animate={
             width < 800 || shouldReduceMotion
