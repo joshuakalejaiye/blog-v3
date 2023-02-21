@@ -10,10 +10,9 @@
 
   @media (min-width: variables.$breakpoint-tablet) {
     flex-direction: row;
-    min-height: 100%;
-    gap: 50px;
+    gap: 30px;
     align-items: center;
-    margin-left: 7.9rem;
+    justify-content: center;
 
     #element::-webkit-scrollbar {
       display: none;
@@ -28,10 +27,22 @@
 
 .cardTitle {
   font-family: variables.$milligram;
+  font-size: variables.$font-xlarge;
+  color: variables.$color-accent;
+
+  @media (min-width: variables.$breakpoint-tablet) {
+    font-size: variables.$font-xxlarge;
+    min-height: 200px;
+    max-width: 400px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 .cardImage {
-  height: 200px;
+  height: 145px;
   width: 100%;
   object-fit: cover;
   -moz-user-select: none; /* These user-select properties are inheritable, used to prevent text selection */
@@ -39,13 +50,12 @@
   -ms-user-select: none; /* From IE10 only */
   user-select: none; /* Not valid CSS yet, as of July 2012 */
   -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
-  user-drag: none;
   cursor: pointer;
 
   @media (min-width: variables.$breakpoint-tablet) {
     height: 600px;
-    min-width: 400px;
-    max-width: 500px;
+    min-width: 300px;
+    max-width: 400px;
     min-height: 365px;
     background-color: variables.$color-accent;
     user-select: none;

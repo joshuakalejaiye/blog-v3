@@ -16,7 +16,7 @@ $breakpoint-tablet: 1000px;
 // $color-accent: #f06c00;
 
 //dark mode colors
-$color-primary: #121212;
+$color-primary: #100b0b;
 $color-secondary: #181818;
 $color-tertiary: #282828;
 $color-light: #939393;
@@ -24,13 +24,14 @@ $color-fontColor: #fff;
 $color-secondaryFontColor: #d8e1ed;
 $color-btnFontColor: #fff;
 $color-BtnHover: #ffffff;
-$color-accent: #e0d0d0;
+$color-accent: #f4e5e5;
 
 // font sizes
 $font-regular: 15px;
 $font-medium: 17px;
 $font-large: 20px;
-$font-xlarge: 32px;
+$font-xlarge: 26px;
+$font-xxlarge: 32px;
 
 :export {
   breakpointTablet: $breakpoint-tablet;
