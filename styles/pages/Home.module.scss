@@ -16,7 +16,18 @@
 }
 
 .blogSection {
-  min-height: 1000px;
+  min-height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  // gap: 200px;
+  margin: auto;
+  padding-top: 4vh;
   @media (min-width: variables.$breakpoint-tablet) {
+    margin-top: 200px;
+    width: 80%;
+    max-width: 1400px;
+    gap: 30px;
+    flex-direction: row;
   }
 }

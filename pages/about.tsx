@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Layout from "../components/Layout";
 import styles from "../styles/pages/About.module.scss";
 
@@ -98,10 +99,13 @@ export default function About() {
             </motion.div>
           </div>
           <div className={styles.imageContainer}>
-            <img
+            <Image
+              width={1000}
+              height={1000}
+              alt="image of me"
               src="https://images.unsplash.com/photo-1473830394358-91588751b241?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
               className={styles.image}
-            ></img>
+            ></Image>
           </div>
         </section>
       </main>

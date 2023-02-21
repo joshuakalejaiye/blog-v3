@@ -3,20 +3,13 @@
 .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   gap: 30px;
-  margin: 0;
   padding: 0;
+  width: 100%;
+  justify-content: center;
 
   @media (min-width: variables.$breakpoint-tablet) {
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-
-    #element::-webkit-scrollbar {
-      display: none;
-    }
+    height: 100%;
   }
 }
 
@@ -32,8 +25,8 @@
 
   @media (min-width: variables.$breakpoint-tablet) {
     font-size: variables.$font-xxlarge;
-    min-height: 200px;
-    max-width: 400px;
+    min-height: 20px;
+    max-width: 100%;
 
     &:hover {
       text-decoration: underline;
@@ -51,14 +44,4 @@
   user-select: none; /* Not valid CSS yet, as of July 2012 */
   -webkit-user-drag: none; /* Prevents dragging of images/divs etc */
   cursor: pointer;
-
-  @media (min-width: variables.$breakpoint-tablet) {
-    height: 600px;
-    min-width: 300px;
-    max-width: 400px;
-    min-height: 365px;
-    background-color: variables.$color-accent;
-    user-select: none;
-    object-position: left;
-  }
 }

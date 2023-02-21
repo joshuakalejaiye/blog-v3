@@ -14,6 +14,7 @@ export default function Home() {
         </section>
         <section draggable="false" id="blog" className={styles.blogSection}>
           <ArticleSelector />
+          <ArticleSelector />
         </section>
       </main>
     </Layout>
