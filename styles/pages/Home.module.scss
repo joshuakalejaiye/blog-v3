@@ -8,7 +8,7 @@
 
 .homeSection,
 .blogSection {
-  min-height: 100vh;
+  min-height: 100svh;
   @media (min-width: variables.$breakpoint-tablet) {
     min-height: 1000px;
     margin-bottom: 0;
@@ -16,7 +16,7 @@
 }
 
 .blogSection {
-  min-height: 100vh;
+  min-height: 100svh;
   align-items: center;
   display: flex;
   flex-direction: column;
