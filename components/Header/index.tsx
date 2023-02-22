@@ -42,7 +42,7 @@ const Header = () => {
   }, []);
 
   const headerStyle = `${styles.nav} ${
-    "/" !== router.pathname && styles.contentMode
+    "/" === router.pathname ? `` : styles.contentMode
   }`;
   return (
     <nav className={headerStyle}>

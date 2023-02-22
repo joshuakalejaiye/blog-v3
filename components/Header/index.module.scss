@@ -8,13 +8,13 @@
   margin-bottom: -11px;
   margin-top: 10px;
   gap: 37px;
-
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
     margin-top: 5px;
     height: 50px;
     align-items: center;
-    margin-right: 2.2vw;
+    padding-bottom: 2px;
+    margin-right: 40px;
     gap: 20px;
   }
 }
@@ -24,12 +24,13 @@
   cursor: pointer;
   font-family: variables.$milligram;
   font-weight: 800;
-  font-size: 18px;
-
+  font-size: variables.$font-large;
   @media (min-width: variables.$breakpoint-tablet) {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     color: variables.$color-accent;
-
+    display: inline-block;
+    position: relative;
+    z-index: 1;
     &:hover {
       color: variables.$color-accent;
     }
@@ -46,10 +47,8 @@
 }
 
 .contentMode {
-  margin-top: 0;
-
   @media (min-width: variables.$breakpoint-tablet) {
-    margin-top: 5px;
-    margin-right: 3.2vw;
+    position: sticky;
+    top: 0;
   }
 }

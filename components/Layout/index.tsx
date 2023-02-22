@@ -1,6 +1,8 @@
 import styles from "./Layout.module.scss";
 import Head from "next/head";
 import Header from "../Header";
+import router from "next/router";
+import { useEffect, useState } from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -9,6 +11,14 @@ interface LayoutProps {
 }
 
 const Layout = ({ children, title, flex }: LayoutProps) => {
+  const [layout, setLayout] = useState(`${styles.homeMode}`);
+
+  useEffect(() => {
+    setLayout(
+      "/" === router.pathname ? `${styles.homeMode}` : `${styles.readerMode}`
+    );
+  }, []);
+
   return (
     <main>
       <Head>
@@ -63,7 +73,7 @@ const Layout = ({ children, title, flex }: LayoutProps) => {
       </noscript>
       <div className="pagecontainer">
         <Header />
-        <div className={styles.content}>{children}</div>
+        <div className={layout}>{children}</div>
         {/* <div className={styles.footer}></div> */}
       </div>
     </main>

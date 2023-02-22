@@ -119,5 +119,5 @@ body {
   background-color: variables.$color-primary;
   color: variables.$color-fontColor;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
+  overflow: overlay;
 }

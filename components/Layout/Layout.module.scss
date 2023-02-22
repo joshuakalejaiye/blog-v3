@@ -1,6 +1,6 @@
 @use "styles/variables";
 
-.content {
+.homeMode {
   max-width: 80vw;
   margin: auto;
 
@@ -9,5 +9,23 @@
     max-width: 70%;
     margin-left: 0;
     margin-bottom: 0;
+
+    * {
+      // outline: 3px solid rgba(122, 43, 219, 0.2);
+    }
+  }
+}
+
+.readerMode {
+  display: flex;
+  justify-content: center;
+  max-width: 80vw;
+  margin: auto;
+
+  // Properties for larger screens
+  @media (min-width: variables.$breakpoint-tablet) {
+    * {
+      // outline: 3px solid rgb(255, 167, 35, 0.2);
+    }
   }
 }
