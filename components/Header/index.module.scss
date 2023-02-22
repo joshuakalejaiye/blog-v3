@@ -8,13 +8,15 @@
   margin-bottom: -11px;
   margin-top: 10px;
   gap: 37px;
+  background-color: variables.$color-primary;
+  z-index: 9999;
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
     margin-top: 5px;
     height: 50px;
     align-items: center;
     padding-bottom: 2px;
-    margin-right: 40px;
+    margin-right: 0;
     gap: 20px;
   }
 }
@@ -27,6 +29,7 @@
   font-size: variables.$font-large;
   @media (min-width: variables.$breakpoint-tablet) {
     margin-bottom: 14px;
+    margin-right: 40px;
     color: variables.$color-accent;
     display: inline-block;
     position: relative;
@@ -49,6 +52,8 @@
 .contentMode {
   @media (min-width: variables.$breakpoint-tablet) {
     position: sticky;
+    padding-top: 2px;
+    margin-top: -2px;
     top: 0;
   }
 }

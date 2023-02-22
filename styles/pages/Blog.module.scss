@@ -3,7 +3,7 @@
 .mainContent {
   flex-direction: column;
 
-  @media (min-width: variables.$breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-small-laptop) {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -18,7 +18,7 @@
   color: variables.$color-accent;
 
   // Properties for larger screens
-  @media (min-width: variables.$breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-small-laptop) {
     font-size: variables.$font-xxxlarge;
     margin-bottom: 30px;
     width: 100%;
@@ -30,32 +30,43 @@
   }
 }
 
-.subtitle {
-  font-family: variables.$milligram;
+.dataItemContainer {
+  display: flex;
+  height: 40px;
+  margin-left: -18px;
+
+  p:nth-child(1) {
+    font-family: variables.$space-mono;
+    color: variables.$color-accent-2;
+    filter: brightness(1);
+    font-weight: bold;
+    border-left: none;
+  }
+}
+
+.dataItem {
   color: variables.$color-accent;
 
   // Properties for larger screens
-  @media (min-width: variables.$breakpoint-tablet) {
-    font-size: variables.$font-xlarge;
-    margin-top: 20px;
-    font-size: 4rem;
-    margin-bottom: 3px;
-    width: 100%;
-  }
-
-  //fold
-  @media (max-width: 290px) {
-    font-size: 2.5rem;
+  @media (min-width: variables.$breakpoint-small-laptop) {
+    font-size: variables.$font-large;
+    font-family: variables.$space-mono;
+    margin-top: 10px;
+    padding: 0 20px;
+    border-left: 1px solid grey;
+    filter: brightness(0.5);
+    font-weight: light;
+    text-transform: uppercase;
   }
 }
 
 .leftContentContainer {
-  @media (min-width: variables.$breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-small-laptop) {
     width: 1000px;
     height: 1000px;
-    margin-top: -6rem;
+    margin-top: -12vh;
     padding-bottom: 10rem;
-    padding-top: 6rem;
+    padding-top: 12vh;
     position: sticky;
     top: 0;
     height: 50%;
@@ -64,8 +75,9 @@
 
 .imageContainer {
   display: flex;
-  @media (min-width: variables.$breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-small-laptop) {
     display: flex;
+    justify-content: center;
     width: 100%;
     padding: 0;
   }
@@ -73,10 +85,8 @@
 
 .image {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  max-height: 600px;
+  object-fit: cover;
 }
 
 .rightContentContainer {
@@ -91,5 +101,6 @@
   width: 100%;
   margin-left: 5%;
   max-width: 1000px;
+  font-size: variables.$font-medium;
   padding-bottom: 3rem;
 }

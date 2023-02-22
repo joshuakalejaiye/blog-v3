@@ -6,6 +6,7 @@ $milligram: "Milligram-Heavy", sans-serif;
 
 // media queries
 $breakpoint-tablet: 1000px;
+$breakpoint-small-laptop: 1366px;
 
 // // light mode colors
 // $color-primary: #e6e6e6;
@@ -25,9 +26,10 @@ $color-secondaryFontColor: #d8e1ed;
 $color-btnFontColor: #fff;
 $color-BtnHover: #ffffff;
 $color-accent: #f4e5e5;
+$color-accent-2: #f6750f;
 
 // font sizes
-$font-regular: 15px;
+$font-small: 15px;
 $font-medium: 17px;
 $font-large: 20px;
 $font-xlarge: 26px;
