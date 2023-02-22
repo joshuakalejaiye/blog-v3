@@ -8,7 +8,7 @@
 
 .homeSection,
 .blogSection {
-  min-height: 100svh;
+  min-height: 100vh;
   @media (min-width: variables.$breakpoint-tablet) {
     min-height: 1000px;
     margin-bottom: 0;
@@ -16,15 +16,15 @@
 }
 
 .blogSection {
-  min-height: 100svh;
   align-items: center;
   display: flex;
   flex-direction: column;
   // gap: 200px;
   margin: auto;
-  padding-top: 4vh;
+  padding-top: 1.5rem;
   @media (min-width: variables.$breakpoint-tablet) {
-    margin-top: 200px;
+    margin: 220px auto;
+    margin-bottom: 100px;
     width: 80%;
     max-width: 1400px;
     gap: 30px;
