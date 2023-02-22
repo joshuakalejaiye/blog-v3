@@ -16,11 +16,12 @@
 .title {
   font-family: variables.$milligram;
   color: variables.$color-accent;
+  font-size: variables.$font-xxlarge;
 
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-small-laptop) {
     font-size: variables.$font-xxxlarge;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     width: 100%;
   }
 
@@ -34,6 +35,12 @@
   display: flex;
   height: 40px;
   margin-left: -18px;
+  margin-bottom: 10px;
+
+  @media (min-width: variables.$breakpoint-small-laptop) {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 
   p:nth-child(1) {
     font-family: variables.$space-mono;
@@ -46,27 +53,27 @@
 
 .dataItem {
   color: variables.$color-accent;
-
+  font-size: variables.$font-large;
+  font-family: variables.$space-mono;
+  margin-top: 10px;
+  padding: 0 20px;
+  border-left: 1px solid grey;
+  filter: brightness(0.5);
+  font-weight: light;
+  text-transform: uppercase;
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-small-laptop) {
-    font-size: variables.$font-large;
-    font-family: variables.$space-mono;
-    margin-top: 10px;
-    padding: 0 20px;
-    border-left: 1px solid grey;
-    filter: brightness(0.5);
-    font-weight: light;
-    text-transform: uppercase;
   }
 }
 
 .leftContentContainer {
+  margin-top: 320px;
   @media (min-width: variables.$breakpoint-small-laptop) {
     width: 1000px;
     height: 1000px;
-    margin-top: -12vh;
+    margin-top: -150px;
     padding-bottom: 10rem;
-    padding-top: 12vh;
+    padding-top: 150px;
     position: sticky;
     top: 0;
     height: 50%;
@@ -75,8 +82,9 @@
 
 .imageContainer {
   display: flex;
+  flex-direction: column-reverse;
   @media (min-width: variables.$breakpoint-small-laptop) {
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     padding: 0;
@@ -84,23 +92,42 @@
 }
 
 .image {
-  display: block;
-  max-height: 600px;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  top: 60px;
+  max-height: 270px;
   object-fit: cover;
+
+  @media (min-width: variables.$breakpoint-small-laptop) {
+    position: relative;
+    left: initial;
+    top: initial;
+    object-fit: cover;
+    max-height: 550px;
+  }
 }
 
 .rightContentContainer {
-  width: 900px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  margin-left: 3rem;
+  @media (min-width: variables.$breakpoint-small-laptop) {
+    max-width: 900px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-left: 3rem;
+  }
 }
 
 .content {
-  width: 100%;
-  margin-left: 5%;
-  max-width: 1000px;
-  font-size: variables.$font-medium;
-  padding-bottom: 3rem;
+  min-width: 80%;
+  max-width: 950px;
+
+  @media (min-width: variables.$breakpoint-small-laptop) {
+    padding-top: 110px;
+    width: 100%;
+    margin-left: 5%;
+    max-width: 1000px;
+    font-size: variables.$font-medium;
+    padding-bottom: 3rem;
+  }
 }

@@ -23,12 +23,12 @@ const Header = () => {
     "/": {
       route: "/about",
       buttonText: "ABOUT",
-      underlineWidth: "55px",
+      underlineWidth: "65px",
     },
     fallback: {
       route: "/",
       buttonText: "BACK",
-      underlineWidth: "48px",
+      underlineWidth: "50px",
     },
   };
 

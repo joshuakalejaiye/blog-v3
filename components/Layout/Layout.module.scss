@@ -17,13 +17,13 @@
 }
 
 .readerMode {
-  display: flex;
-  justify-content: center;
   max-width: 80vw;
   margin: auto;
 
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
+    display: flex;
+    justify-content: center;
     * {
       // outline: 3px solid rgb(255, 167, 35, 0.2);
     }
