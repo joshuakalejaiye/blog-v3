@@ -5,6 +5,7 @@ import { articleData } from "../mocks/articleData";
 import styles from "../styles/pages/Blog.module.scss";
 
 const data = {
+  body: articleData.body,
   author: "ME",
   lastUpdated: "12:18 BST",
   timeToRead: "5 min read",
@@ -12,8 +13,9 @@ const data = {
 
 export default function BlogPage() {
   const pageTitle = "BlogPage";
-
-  const { author, lastUpdated, timeToRead } = data;
+  const readingTime = require("reading-time/lib/reading-time");
+  const { author, lastUpdated, body } = data;
+  const timeToRead = readingTime(body).text;
 
   return (
     <Layout flex title={pageTitle}>
@@ -72,7 +74,7 @@ export default function BlogPage() {
               opacity: { duration: 0.2 },
             }}
           >
-            {articleData.body}
+            {data.body}
           </motion.div>
         </div>
       </section>
