@@ -1,10 +1,12 @@
 @use "styles/variables";
 
 .container {
-  width: 100%;
+  width: 98%;
   justify-content: center;
-
+  margin-top: -60px;
   @media (min-width: variables.$breakpoint-tablet) {
+    width: 100%;
+    margin-top: 0;
   }
 }
 

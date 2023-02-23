@@ -4,16 +4,17 @@ import Link from "next/link";
 import styles from "./index.module.scss";
 
 type ArticleCardProps = {
+  id: string;
   imageSrc: string;
   title: string;
   subtitle: string;
 };
 
-const ArticleCard = ({ imageSrc, title, subtitle }: ArticleCardProps) => {
+const ArticleCard = ({ id, imageSrc, title, subtitle }: ArticleCardProps) => {
   const MotionImage = motion(Image);
   return (
     <div className={styles.card}>
-      <Link href={"/blog"}>
+      <Link href={`/blog/${id}`}>
         <MotionImage
           draggable="false"
           src={imageSrc}

@@ -21,8 +21,11 @@ export default function Home() {
           <Hero />
         </section>
         <section draggable="false" id="blog" className={styles.blogSection}>
-          <ArticleMain />
-          <ArticleSelector />
+          <div className={styles.blogTitle}>Recent Posts</div>
+          <div className={styles.blogPostsContainer}>
+            <ArticleMain />
+            <ArticleSelector />
+          </div>
         </section>
       </main>
     </Layout>
