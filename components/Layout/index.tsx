@@ -7,10 +7,9 @@ import { useEffect, useState } from "react";
 interface LayoutProps {
   children: React.ReactNode;
   title: string;
-  flex?: boolean;
 }
 
-const Layout = ({ children, title, flex }: LayoutProps) => {
+const Layout = ({ children, title }: LayoutProps) => {
   const [layout, setLayout] = useState(`${styles.homeMode}`);
 
   useEffect(() => {

@@ -9,7 +9,9 @@
   margin-top: 10px;
   gap: 37px;
   background-color: variables.$color-primary;
-  z-index: 9999;
+  z-index: 100;
+  width: 100vw;
+  padding-bottom: 10px;
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-tablet) {
     margin-top: 5px;
@@ -27,6 +29,8 @@
   font-family: variables.$milligram;
   font-weight: 800;
   font-size: variables.$font-large;
+  margin-right: 75px;
+
   @media (min-width: variables.$breakpoint-tablet) {
     margin-bottom: 14px;
     margin-right: 40px;
@@ -50,10 +54,28 @@
 }
 
 .contentMode {
+  position: sticky;
+  padding-top: 2px;
+  margin-top: -2px;
+  top: 0;
+  left: 0;
+
   @media (min-width: variables.$breakpoint-tablet) {
     position: sticky;
     padding-top: 2px;
     margin-top: -2px;
     top: 0;
+    left: 0;
+  }
+}
+
+.progressBar {
+  background-color: variables.$color-accent;
+  height: 2px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  filter: brightness(0.8);
+  @media (min-width: variables.$breakpoint-tablet) {
   }
 }

@@ -2,42 +2,44 @@
 import styles from "./index.module.scss";
 import { motion } from "framer-motion";
 import { useReducedMotion } from "framer-motion";
-import useScreenSize from "../../hooks/useScreenSize";
 import Image from "next/image";
 import heroImage from "../../assets/ebun_oluwole_max.webp";
+import { useState } from "react";
 
 const Hero = () => {
-  const { width } = useScreenSize();
   const shouldReduceMotion = useReducedMotion();
+  const [imageLoaded, setImageLoaded] = useState(false);
+
   return (
     <div className={styles.container}>
       {/* <div className={styles.splash}></div> */}
       <div draggable="false" className={styles.textSection}>
-        <div className={styles.imageCropper}>
+        <motion.div
+          animate={imageLoaded && { opacity: 1 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
+          transition={{
+            delay: 0.4,
+            opacity: { duration: 0.2 },
+          }}
+          className={styles.imageCropper}
+        >
           <Image
             className={styles.image}
             draggable="false"
+            onLoad={() => setImageLoaded(true)}
             src={heroImage}
             width={6000}
             height={4000}
             alt="MUST BE REPLACED"
           ></Image>
-        </div>
+        </motion.div>
         <motion.div
-          animate={
-            width < 800 || shouldReduceMotion
-              ? { x: 0, y: 0, opacity: 1 }
-              : { y: 0, opacity: 1 }
-          }
+          animate={{ y: 0, opacity: 1 }}
           initial={
-            width < 800
-              ? { y: 0, x: 0, opacity: 0 }
-              : shouldReduceMotion
-              ? { y: 680, opacity: 1 }
-              : { y: -670, opacity: 0 }
+            shouldReduceMotion ? { y: 0, opacity: 1 } : { y: -670, opacity: 0 }
           }
           transition={{
-            delay: 0.5,
+            delay: 1,
             opacity: { duration: 0.2 },
             y: { duration: 0.3, type: "spring" },
           }}
@@ -52,10 +54,10 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          animate={width < 800 ? { opacity: 1 } : { opacity: 1 }}
-          initial={{ opacity: 0 }}
+          animate={imageLoaded && { opacity: 1 }}
+          initial={shouldReduceMotion ? { opacity: 1 } : { opacity: 0 }}
           transition={{
-            delay: 1,
+            delay: 1.5,
             opacity: { duration: 0.2 },
           }}
         >

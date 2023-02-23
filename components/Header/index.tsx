@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { useRouter } from "next/router";
+import useScrollProgress from "../../hooks/useScrollProgress";
 
 const Header = () => {
   const [navItemHovered, setNavItemHovered] = useState(false);
@@ -16,6 +17,7 @@ const Header = () => {
   }>();
 
   const [link, setLink] = useState<any>("/about");
+  const { dec, scrollProgress, scrollMax } = useScrollProgress();
 
   const destinations: {
     [x in string]: { route: string; buttonText: string; underlineWidth: any };
@@ -45,38 +47,46 @@ const Header = () => {
     "/" === router.pathname ? `` : styles.contentMode
   }`;
   return (
-    <nav className={headerStyle}>
-      <Link className={styles.navItem} href={link}>
-        <>
-          <motion.p
-            onMouseEnter={() => setNavItemHovered(true)}
-            onMouseLeave={() => setNavItemHovered(false)}
-            whileHover={{ x: 0, y: 0, scale: 1.2 }}
-            transition={{ scale: { duration: 0.1 }, opacity: { delay: 0.5 } }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className={styles.navItem}
-            style={{ margin: 0, marginTop: "15px", padding: 0 }}
-          >
-            {pathInfo?.buttonText}
-          </motion.p>
-          <motion.div
-            className={styles.underline}
-            layoutId="underline"
-            initial={{ x: 2, y: 2, opacity: 0 }}
-            style={{ margin: 0, padding: 0 }}
-            animate={
-              navItemHovered
-                ? { width: pathInfo?.underlineWidth, opacity: 1 }
-                : {
-                    width: shouldReduceMotion ? pathInfo?.underlineWidth : "0%",
-                    opacity: 0,
-                  }
-            }
-          />
-        </>
-      </Link>
-    </nav>
+    <>
+      <nav className={headerStyle}>
+        <div
+          className={styles.progressBar}
+          style={{ width: `${(dec ?? 0) * 100}%` }}
+        ></div>
+        <Link className={styles.navItem} href={link}>
+          <>
+            <motion.p
+              onMouseEnter={() => setNavItemHovered(true)}
+              onMouseLeave={() => setNavItemHovered(false)}
+              whileHover={{ x: 0, y: 0, scale: 1.2 }}
+              transition={{ scale: { duration: 0.1 }, opacity: { delay: 0.5 } }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className={styles.navItem}
+              style={{ margin: 0, marginTop: "15px", padding: 0 }}
+            >
+              {pathInfo?.buttonText}
+            </motion.p>
+            <motion.div
+              className={styles.underline}
+              layoutId="underline"
+              initial={{ x: 2, y: 2, opacity: 0 }}
+              style={{ margin: 0, padding: 0 }}
+              animate={
+                navItemHovered
+                  ? { width: pathInfo?.underlineWidth, opacity: 1 }
+                  : {
+                      width: shouldReduceMotion
+                        ? pathInfo?.underlineWidth
+                        : "0%",
+                      opacity: 0,
+                    }
+              }
+            />
+          </>
+        </Link>
+      </nav>
+    </>
   );
 };
 

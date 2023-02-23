@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 
 const imageTitles = [
-  "The First image",
+  "CSS Modules & Scss Variables",
   "The Second imageThe Second image The Second imageThe Second image",
-  "The Third image",
-  "Read more",
+  "Trying out Svelte",
+  "Design Systems",
 ];
 
 const imageUrls = [

@@ -21,7 +21,7 @@
   margin: auto;
 
   // Properties for larger screens
-  @media (min-width: variables.$breakpoint-tablet) {
+  @media (min-width: variables.$breakpoint-small-laptop) {
     display: flex;
     justify-content: center;
     * {

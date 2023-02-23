@@ -2,8 +2,9 @@
 
 .mainContent {
   flex-direction: column;
-
+  padding-top: 20px;
   @media (min-width: variables.$breakpoint-small-laptop) {
+    padding-top: 0px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -36,10 +37,12 @@
   height: 40px;
   margin-left: -18px;
   margin-bottom: 10px;
+  width: 100vw;
 
   @media (min-width: variables.$breakpoint-small-laptop) {
     margin-bottom: 0px;
     margin-top: 0px;
+    width: initial;
   }
 
   p:nth-child(1) {
@@ -53,7 +56,7 @@
 
 .dataItem {
   color: variables.$color-accent;
-  font-size: variables.$font-large;
+  font-size: variables.$font-medium;
   font-family: variables.$space-mono;
   margin-top: 10px;
   padding: 0 20px;
@@ -63,6 +66,7 @@
   text-transform: uppercase;
   // Properties for larger screens
   @media (min-width: variables.$breakpoint-small-laptop) {
+    font-size: variables.$font-large;
   }
 }
 
@@ -98,13 +102,15 @@
   top: 60px;
   max-height: 270px;
   object-fit: cover;
+  object-position: center;
 
   @media (min-width: variables.$breakpoint-small-laptop) {
     position: relative;
     left: initial;
     top: initial;
-    object-fit: cover;
-    max-height: 550px;
+    max-height: 600px;
+    width: initial;
+    height: initial;
   }
 }
 
@@ -121,7 +127,8 @@
 .content {
   min-width: 80%;
   max-width: 950px;
-
+  color: variables.$color-accent;
+  font-family: variables.$space-mono;
   @media (min-width: variables.$breakpoint-small-laptop) {
     padding-top: 110px;
     width: 100%;
