@@ -7,7 +7,7 @@ export default function About() {
   const pageTitle = "About";
 
   return (
-    <Layout flex title={pageTitle}>
+    <Layout title={pageTitle}>
       <main className={styles.main}>
         <section className={styles.mainContent}>
           <div className={styles.content}>
