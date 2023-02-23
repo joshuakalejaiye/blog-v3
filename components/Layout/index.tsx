@@ -32,7 +32,7 @@ const Layout = ({ children, title }: LayoutProps) => {
             }
 
             html { 
-              background-color: #1E1E1E;
+              background-color: #100b0b;
             }
             .turnOnJsContainer { 
               display: flex;
@@ -43,7 +43,7 @@ const Layout = ({ children, title }: LayoutProps) => {
             }
             .turnOnJs {
               color: white;
-              font-family: Verdana;
+              font-family: Milligram;
               text-decoration: none;
               font-style: italic;
               margin: auto;

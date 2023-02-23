@@ -8,18 +8,13 @@ import { articleData } from "../../mocks/articleData";
 import posts from "../../mocks/posts";
 import styles from "../../styles/pages/Blog.module.scss";
 
-const data = {
-  body: articleData.body,
-  author: "me",
-  lastUpdated: "12:18 BST",
-  timeToRead: "5 min read",
-};
-
 export default function BlogPage() {
-  const {
-    query: { id },
+  let {
+    query: { id: idFromNext },
     push,
   } = useRouter();
+
+  const id = Array.isArray(idFromNext) ? -1 : Number(idFromNext);
 
   const pageTitle = "BlogPage";
   const readingTime = require("reading-time/lib/reading-time");
@@ -27,12 +22,17 @@ export default function BlogPage() {
   const layoutRef = useRef<any>(null);
 
   const [imageLoaded, setImageLoaded] = useState(false);
-
+  const [mounted, setMounted] = useState(false);
   const { dec, scrollProgress, scrollMax } = useScrollProgress();
 
   useEffect(() => {
-    if (!posts?.[Number(id)]) push("/#blog");
+    setMounted(true);
   }, []);
+
+  useEffect(() => {
+    console.log(id, isNaN(id), id < 0, id > posts.length);
+    if (mounted && (isNaN(id) || id < 0 || id > posts.length)) push("/#blog");
+  }, [id, push]);
 
   useEffect(() => {
     console.log(dec, scrollProgress, scrollMax);
@@ -53,7 +53,7 @@ export default function BlogPage() {
                 shouldReduceMotion
                   ? {}
                   : {
-                      delay: 0.4,
+                      delay: 0.2,
                       opacity: { duration: 0.2 },
                     }
               }
@@ -66,7 +66,7 @@ export default function BlogPage() {
                   shouldReduceMotion
                     ? {}
                     : {
-                        delay: 1.1,
+                        delay: 0.55,
                         opacity: { duration: 0.2 },
                       }
                 }
@@ -91,7 +91,7 @@ export default function BlogPage() {
                 shouldReduceMotion
                   ? {}
                   : {
-                      delay: 1.1,
+                      delay: 0.55,
                       opacity: { duration: 0.2 },
                     }
               }
@@ -112,7 +112,7 @@ export default function BlogPage() {
                 shouldReduceMotion
                   ? {}
                   : {
-                      delay: 1.65,
+                      delay: 0.825,
                       opacity: { duration: 0.2 },
                     }
               }
@@ -125,5 +125,5 @@ export default function BlogPage() {
     );
   }
 
-  return <></>;
+  return <div></div>;
 }
