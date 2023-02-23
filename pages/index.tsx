@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import ArticleMain from "../components/ArticleMain";
 import ArticleSelector from "../components/ArticleSelector";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
@@ -20,7 +21,7 @@ export default function Home() {
           <Hero />
         </section>
         <section draggable="false" id="blog" className={styles.blogSection}>
-          <ArticleSelector />
+          <ArticleMain />
           <ArticleSelector />
         </section>
       </main>

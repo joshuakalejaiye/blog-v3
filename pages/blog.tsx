@@ -8,7 +8,7 @@ import styles from "../styles/pages/Blog.module.scss";
 
 const data = {
   body: articleData.body,
-  author: "ME",
+  author: "me",
   lastUpdated: "12:18 BST",
   timeToRead: "5 min read",
 };

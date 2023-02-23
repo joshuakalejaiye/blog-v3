@@ -47,11 +47,15 @@
 
   p:nth-child(1) {
     font-family: variables.$space-mono;
-    color: variables.$color-accent-2;
+    color: variables.$color-accent;
     filter: brightness(1);
-    font-weight: bold;
     border-left: none;
     text-transform: lowercase;
+    margin-top: 10px;
+
+    @media (min-width: variables.$breakpoint-small-laptop) {
+      margin-top: 9px;
+    }
   }
 }
 
