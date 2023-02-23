@@ -3,8 +3,8 @@ import ArticleCard from "../ArticleCard";
 import styles from "./index.module.scss";
 
 const ArticleSelector = () => {
-  const [firstPost, ...lastThreePosts] = posts;
-
+  const [firstPost, secondPost, thirdPost, ...rest] = posts.reverse();
+  const lastThreePosts = [firstPost, secondPost, thirdPost];
   return (
     <div
       draggable="false"

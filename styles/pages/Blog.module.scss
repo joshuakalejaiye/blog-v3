@@ -35,14 +35,26 @@
 .dataItemContainer {
   display: flex;
   height: 40px;
+  width: 100%;
   margin-left: -18px;
-  margin-bottom: 10px;
-  width: 100vw;
 
-  @media (min-width: variables.$breakpoint-small-laptop) {
-    margin-bottom: 0px;
-    margin-top: 0px;
-    width: initial;
+  p:nth-child(1) {
+    display: none;
+  }
+  p:nth-child(2) {
+    border: none;
+  }
+
+  @media (max-width: 387px) {
+    width: 80vw;
+    margin-bottom: calc(50px - (10vw * 0.6));
+
+    p:nth-child(1) {
+      display: none;
+    }
+    p:nth-child(2) {
+      border: none;
+    }
   }
 
   p:nth-child(1) {
@@ -54,7 +66,14 @@
     margin-top: 10px;
 
     @media (min-width: variables.$breakpoint-small-laptop) {
+      display: block;
       margin-top: 9px;
+    }
+  }
+
+  p:nth-child(2) {
+    @media (min-width: variables.$breakpoint-small-laptop) {
+      border-left: 1px solid grey;
     }
   }
 }
@@ -130,7 +149,6 @@
 
 .content {
   min-width: 80%;
-  max-width: 950px;
   color: variables.$color-accent;
   font-family: variables.$space-mono;
   @media (min-width: variables.$breakpoint-small-laptop) {

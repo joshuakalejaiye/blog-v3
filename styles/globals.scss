@@ -111,13 +111,11 @@ h1 {
 }
 
 * {
-  // border: 1px solid red;
+  // outline: 1px solid hsl(0, 100%, 50%);
   font-family: variables.$poppins;
 }
 
 body {
   background-color: variables.$color-primary;
   color: variables.$color-fontColor;
-  overflow-x: hidden;
-  overflow: overlay;
 }

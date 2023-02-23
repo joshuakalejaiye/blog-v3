@@ -14,6 +14,7 @@ const ArticleMain = () => {
           <MotionImage
             draggable="false"
             src={imageSrc}
+            loading="eager"
             width={1000}
             height={1000}
             className={styles.mainImage}

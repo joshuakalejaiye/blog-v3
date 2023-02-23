@@ -39,7 +39,40 @@ export default [
     id: "3",
     imageSrc:
       "https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80",
-    title: "Trying out Svelte",
+    title: "Trying out SvelteKit 1.0",
+    lastUpdated: "12 DEC",
+    previewText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, at atque consequuntur placeat facilis dolores repudiandae possimus et autem, magnam dolor! Repellendus velit, quisquam culpa id necessitatibus eum! Non magnam, amet quis et veniam deleniti modi eligendi quos.",
+    body: articleData.body,
+    author: "ME",
+  },
+  {
+    id: "4",
+    imageSrc:
+      "https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80",
+    title: "Next.js, SSR and IsMounted Hook",
+    lastUpdated: "12 DEC",
+    previewText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, at atque consequuntur placeat facilis dolores repudiandae possimus et autem, magnam dolor! Repellendus velit, quisquam culpa id necessitatibus eum! Non magnam, amet quis et veniam deleniti modi eligendi quos.",
+    body: articleData.body,
+    author: "ME",
+  },
+  {
+    id: "5",
+    imageSrc:
+      "https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80",
+    title: "Debugging CSS with Outline, not Border!",
+    lastUpdated: "12 DEC",
+    previewText:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, at atque consequuntur placeat facilis dolores repudiandae possimus et autem, magnam dolor! Repellendus velit, quisquam culpa id necessitatibus eum! Non magnam, amet quis et veniam deleniti modi eligendi quos.",
+    body: articleData.body,
+    author: "ME",
+  },
+  {
+    id: "6",
+    imageSrc:
+      "https://images.unsplash.com/photo-1577648188599-291bb8b831c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1479&q=80",
+    title: "The Missing Dependency Array That Broke Prod",
     lastUpdated: "12 DEC",
     previewText:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, at atque consequuntur placeat facilis dolores repudiandae possimus et autem, magnam dolor! Repellendus velit, quisquam culpa id necessitatibus eum! Non magnam, amet quis et veniam deleniti modi eligendi quos.",
