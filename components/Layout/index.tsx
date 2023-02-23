@@ -22,7 +22,7 @@ const Layout = ({ children, title }: LayoutProps) => {
     <main>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Joshua Kalejaiye</title>
+        <title>{title ? `${title} - Joshua Kalejaiye` : `Loading`}</title>
       </Head>
       <noscript>
         <style type="text/css">

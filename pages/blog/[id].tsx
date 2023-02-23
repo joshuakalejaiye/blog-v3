@@ -16,7 +16,6 @@ export default function BlogPage() {
 
   const id = Array.isArray(idFromNext) ? -1 : Number(idFromNext);
 
-  const pageTitle = "BlogPage";
   const readingTime = require("reading-time/lib/reading-time");
   const shouldReduceMotion = useReducedMotion();
   const layoutRef = useRef<any>(null);
@@ -41,6 +40,7 @@ export default function BlogPage() {
   if (posts?.[Number(id)]) {
     const { title, author, lastUpdated, body } = posts?.[Number(id)];
     const timeToRead = readingTime(body).text;
+    const pageTitle = title;
 
     return (
       <Layout title={pageTitle}>
