@@ -29,11 +29,11 @@ const Hero = () => {
             onLoad={() => setImageLoaded(true)}
             src={heroImage}
             fill
-            alt="MUST BE REPLACED"
+            alt="Image of a bustling city (Nottingham) in the daytime"
           ></Image>
         </motion.div>
         <motion.div
-          animate={{ y: 0, opacity: 1 }}
+          animate={imageLoaded && { y: 0, opacity: 1 }}
           initial={
             shouldReduceMotion ? { y: 0, opacity: 1 } : { y: -670, opacity: 0 }
           }
