@@ -28,8 +28,7 @@ const Hero = () => {
             draggable="false"
             onLoad={() => setImageLoaded(true)}
             src={heroImage}
-            width={6000}
-            height={4000}
+            fill
             alt="MUST BE REPLACED"
           ></Image>
         </motion.div>
