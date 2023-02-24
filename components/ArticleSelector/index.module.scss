@@ -4,11 +4,11 @@
   width: 98%;
   justify-content: center;
   margin-top: -60px;
-  padding-right: 20px;
 
   @media (min-width: variables.$breakpoint-tablet) {
     width: 100%;
     margin-top: 0;
+    padding-right: 20px;
   }
 }
 
