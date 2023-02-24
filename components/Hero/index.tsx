@@ -4,15 +4,18 @@ import { motion } from "framer-motion";
 import { useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import heroImage from "../../assets/ebun_oluwole_max.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const shouldReduceMotion = useReducedMotion();
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(true);
+
+  useEffect(() => {
+    console.log(imageLoaded);
+  }, [imageLoaded]);
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.splash}></div> */}
       <div draggable="false" className={styles.textSection}>
         <motion.div
           animate={imageLoaded && { opacity: 1 }}

@@ -16,12 +16,12 @@ export default function Home() {
 
   return (
     <Layout title={pageTitle}>
-      <main className={styles.main}>
+      <main className={styles.main} id="hero">
         <section className={styles.homeSection}>
           <Hero />
         </section>
         <section draggable="false" id="blog" className={styles.blogSection}>
-          <div className={styles.blogTitle}>Recent Posts</div>
+          <div className={styles.blogTitle}>Latest Post</div>
           <div className={styles.blogPostsContainer}>
             <ArticleMain />
             <ArticleSelector />
