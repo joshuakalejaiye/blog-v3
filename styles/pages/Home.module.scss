@@ -22,6 +22,7 @@
   margin: auto;
 
   @media (min-width: variables.$breakpoint-tablet) {
+    transform: scale(0.85);
     justify-content: center;
     margin: 200px auto;
     margin-bottom: 100px;
@@ -33,19 +34,21 @@
 }
 
 .blogTitle {
-  font-family: variables.$milligram;
+  font-family: variables.$space-mono;
   font-size: 40px;
   color: variables.$color-accent;
   margin-left: 11px;
   margin-bottom: -22px;
   z-index: 300;
   transform: rotate(-1.8deg);
+  filter: brightness(0.5);
 
   @media (min-width: variables.$breakpoint-tablet) {
     margin-left: 38px;
     margin-bottom: -62px;
     font-size: variables.$font-xxxlarge;
     transform: rotate(-1.8deg);
+    letter-spacing: -2px;
   }
 }
 

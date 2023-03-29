@@ -22,7 +22,6 @@ const ArticleMain = () => {
           ></MotionImage>
           <h3 className={styles.mainTitle}>{title}</h3>
         </div>
-        <p className={styles.mainSubtitle}>{lastUpdated}</p>
         <p className={styles.mainPreviewText}>{previewText}</p>
       </Link>
     </div>

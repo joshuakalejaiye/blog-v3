@@ -11,9 +11,6 @@ const ArticleSelector = () => {
       data-prev-percentage="0"
       className={styles.container}
     >
-      <div>
-        <p className={styles.cardsTitle}>more posts</p>
-      </div>
       <div className={styles.cardsContainer}>
         {lastThreePosts.map((post) => (
           <ArticleCard
@@ -24,6 +21,9 @@ const ArticleSelector = () => {
             imageSrc={post.imageSrc}
           />
         ))}
+      </div>
+      <div>
+        <p className={styles.cardsTitle}>more posts</p>
       </div>
     </div>
   );
